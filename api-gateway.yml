@@ -2,7 +2,7 @@ server:
   port: 8080
 
 service:
-  message: API Gateway2 loaded from Github config repo
+  message: API Gateway loaded from Github config repo
 
 spring:
   cloud:
