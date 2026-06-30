@@ -27,7 +27,7 @@ spring:
                 - AddResponseHeader=X-Platform, microservices-pro
 
 jwt:
-  secret: ${JWT_SECRET:my-super-secret-key-for-jwt-authentication-123456}
+  secret: ${JWT_SECRET:361a65ca5fde3dcf658a71a7b93bd8cf3b17d564a5e5cae93aac497a890978b5}
 
 eureka:
   client:
