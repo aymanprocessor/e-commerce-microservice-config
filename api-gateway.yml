@@ -22,7 +22,7 @@ spring:
                     redis-rate-limiter.replenishRate: 10
                     redis-rate-limiter.burstCapacity: 20
                     redis-rate-limiter.requestedTokens: 1
-                    rey-resolver: "#{@ipKeyResolver}
+                    key-resolver: "#{@ipKeyResolver}
 
             - id: inventory-service-route
               uri: lb://inventory-service
