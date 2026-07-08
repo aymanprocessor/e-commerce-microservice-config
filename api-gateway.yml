@@ -37,6 +37,14 @@ spring:
                 - StripPrefix=0
                 - AddResponseHeader=X-Platform, microservices-pro
 
+            - id: order-service-route
+              uri: lb://order-service
+              predicates:
+                - Path=/api/orders,/api/orders/**
+              filters:
+                - StripPrefix=0
+                - AddResponseHeader=X-Platform, microservices-pro
+
 jwt:
   secret: ${JWT_SECRET:361a65ca5fde3dcf658a71a7b93bd8cf3b17d564a5e5cae93aac497a890978b5}
 
