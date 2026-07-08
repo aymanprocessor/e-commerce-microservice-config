@@ -20,7 +20,7 @@ spring:
               predicates:
                 - Path=/api/products,/api/products/**
               filters:
-                - StripPrefix=1
+                - StripPrefix=0
                 - AddResponseHeader=X-Platform, microservices-pro
                 - name: RequestRateLimiter
                   args:
@@ -34,7 +34,7 @@ spring:
               predicates:
                 - Path=/api/inventory,/api/inventory/**
               filters:
-                - StripPrefix=1
+                - StripPrefix=0
                 - AddResponseHeader=X-Platform, microservices-pro
 
 jwt:
