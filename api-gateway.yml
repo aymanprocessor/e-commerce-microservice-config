@@ -32,7 +32,7 @@ spring:
             - id: inventory-service-route
               uri: lb://inventory-service
               predicates:
-                - Path=/api/inventory,/api/inventory/**
+                - Path=/api/v1/inventory,/api/v1/inventory/**
               filters:
                 - StripPrefix=0
                 - AddResponseHeader=X-Platform, microservices-pro
@@ -44,6 +44,8 @@ spring:
               filters:
                 - StripPrefix=0
                 - AddResponseHeader=X-Platform, microservices-pro
+
+            
 
 jwt:
   secret: ${JWT_SECRET:361a65ca5fde3dcf658a71a7b93bd8cf3b17d564a5e5cae93aac497a890978b5}
