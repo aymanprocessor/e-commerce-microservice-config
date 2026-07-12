@@ -45,6 +45,14 @@ spring:
                 - StripPrefix=0
                 - AddResponseHeader=X-Platform, microservices-pro
 
+            - id: payment-service-route
+              uri: lb://payment-service
+              predicates:
+                - Path=/api/v1/payment,/api/v1/payment/**
+              filters:
+                - StripPrefix=0
+                - AddResponseHeader=X-Platform, microservices-pro
+
             
 
 jwt:
